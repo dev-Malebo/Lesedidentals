@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Era Dental Surgery</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-banner">DEMO · Era Dental Surgery</div>
+  <nav>
+    <div class="inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Mafikeng Dentistry">
+        <div class="logo-text">
+          <strong>Mafikeng Dentistry</strong>
+          <small>Dr T. E. Twala Network</small>
+        </div>
+      </a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="locations.html" class="">Locations</a><a href="contact.html" class="active">Contact</a>
+        <a href="tel:0183816340" class="nav-cta">Central Booking · 018 381 6340</a>
+      </div>
+    </div>
+  </nav>
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Get in touch</div>
+      <h1>Contact</h1>
+      <p>Reach any of our three practices — principal clinic, Mmabatho branch, or Golf View.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-box">
+            <h3>Principal clinic</h3>
+            <p>
+              <a href="tel:0183816340"><strong>018 381 6340</strong></a><br>
+              30 Nelson Mandela Drive, Libertas<br>
+              Mahikeng, 2745<br>
+              admin@eradental.co.za
+            </p>
+          </div>
+          <div class="contact-box">
+            <h3>Mmabatho branch</h3>
+            <p>
+              <a href="tel:0183840749"><strong>018 384 0749</strong></a><br>
+              Unit 12, 4040 Peace Crescent<br>
+              Mmabatho, 2790
+            </p>
+          </div>
+          <div class="contact-box">
+            <h3>Mafikeng Dental Centre</h3>
+            <p>
+              <a href="tel:0180040025"><strong>018 004 0025</strong></a><br>
+              Shop 2, Gryphon House<br>
+              Warren Street, Golf View<br>
+              Mahikeng, 2745<br>
+              info@mafikengdentistry.co.za
+            </p>
+          </div>
+          <div class="contact-box">
+            <h3>Hours</h3>
+            <table class="hours-table">
+              <tr><td>Monday – Friday</td><td>08:00 – 17:00</td></tr>
+              <tr><td>Saturday</td><td>08:00 – 13:00</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </table>
+            <p style="margin-top:12px;font-size:.84rem">Medical aid · Cash · EFT</p>
+          </div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=Era+Dental+Surgery,+30+Nelson+Mandela+Dr,+Libertas,+Mahikeng+2745&output=embed" loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+
+      <div class="form-section" id="book">
+        <h2>Request an appointment</h2>
+        <p>Complete the form below and our team will follow up. For urgent care, please call the central booking line.</p>
+        <form id="appointmentForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">South African phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="082 123 4567 or +27 82 123 4567">
+            </div>
+            <div class="form-group">
+              <label for="location">Preferred practice location</label>
+              <select id="location" name="location" required>
+                <option value="" disabled selected>Select a practice</option>
+                <option value="Era Dental Surgery (Central)">Era Dental Surgery (Central)</option>
+                <option value="Lesedi Dental Surgery (Mmabatho)">Lesedi Dental Surgery (Mmabatho)</option>
+                <option value="Mafikeng Dental Centre (Golf View)">Mafikeng Dental Centre (Golf View)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Preferred appointment date</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group full">
+              <label for="message">Message / comments</label>
+              <textarea id="message" name="message" required placeholder="Tell us briefly what you need (e.g. check-up, emergency, braces consultation)"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit appointment request</button>
+            <a href="tel:0183816340" class="btn btn-outline">Call Central Reception</a>
+          </div>
+          <p class="form-note">This form sends an enquiry request only. Confirmation is by phone or email from the practice.</p>
+        </form>
+      </div>
+
+      <div style="margin-top:40px;text-align:center">
+        <a href="tel:0183816340" class="btn btn-primary">Call Central Reception</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <img src="logo.png" alt="Mafikeng Dentistry">
+    <div class="footer-logo">Mafikeng Dentistry Group</div>
+    <div class="footer-tag">Private Oral Care Network</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="locations.html">Locations</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:0183816340">018 381 6340</a>
+    </div>
+    <div class="footer-copy">© 2026 Mafikeng Dentistry · All rights reserved</div>
+  </footer>
+  <a href="tel:0183816340" class="float-call" aria-label="Call">📞</a>
+
+  <script>
+  (function () {
+    var form = document.getElementById("appointmentForm");
+    if (!form) return;
+
+    var dateInput = document.getElementById("date");
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var mm = String(today.getMonth() + 1).padStart(2, "0");
+    var dd = String(today.getDate()).padStart(2, "0");
+    dateInput.min = yyyy + "-" + mm + "-" + dd;
+
+    function isValidSAPhone(value) {
+      var cleaned = value.replace(/[\s\-()]/g, "");
+      // 0XXXXXXXXX (10 digits) or +27XXXXXXXXX
+      return /^(0\d{9}|\+27\d{9})$/.test(cleaned);
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var fields = ["fullName", "email", "phone", "location", "date", "message"];
+      var valid = true;
+
+      fields.forEach(function (id) {
+        var el = document.getElementById(id);
+        el.classList.remove("error");
+        if (!el.value || !String(el.value).trim()) {
+          el.classList.add("error");
+          valid = false;
+        }
+      });
+
+      var phoneEl = document.getElementById("phone");
+      if (phoneEl.value.trim() && !isValidSAPhone(phoneEl.value)) {
+        phoneEl.classList.add("error");
+        valid = false;
+        alert("Please enter a valid South African phone number (e.g. 082 123 4567 or +27 82 123 4567).");
+        return;
+      }
+
+      var dateEl = document.getElementById("date");
+      if (dateEl.value) {
+        var selected = new Date(dateEl.value + "T00:00:00");
+        var startToday = new Date();
+        startToday.setHours(0, 0, 0, 0);
+        if (selected < startToday) {
+          dateEl.classList.add("error");
+          valid = false;
+          alert("Please choose today or a future date for your appointment.");
+          return;
+        }
+      }
+
+      if (!valid) {
+        alert("Please complete all fields before submitting.");
+        return;
+      }
+
+      var branch = document.getElementById("location").value;
+      alert("Thank you! Your appointment request for " + branch + " has been compiled.");
+      form.reset();
+      dateInput.min = yyyy + "-" + mm + "-" + dd;
+    });
+  })();
+  </script>
+
+</body>
+</html>
