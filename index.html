@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Era Dental Surgery | Mahikeng</title>
+  <meta name="description" content="Era Dental Surgery — modern dental care in Mahikeng. Check-ups, cleaning, fillings, crowns, dentures and more. 30 Nelson Mandela Drive.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f4fbf9;--card:#fff;--ink:#0f2420;--ink-soft:#4a6660;--ink-muted:#7a9a92;
+  --border:#e0f0ec;--border-strong:#c2e0d8;
+  --teal:#0d9488;--teal-dim:#0b7d72;--teal-soft:#e6f7f5;--teal-pale:#f0faf8;
+  --gold:#fbbf24;--white:#fff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;line-height:1.2;letter-spacing:-0.02em}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .inner{max-width:1100px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--teal)}
+.nav-logo span{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--teal-dim));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.nav-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.nav-links a{font-size:.86rem;font-weight:600;color:var(--ink-soft);padding:8px 12px;border-radius:8px}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);background:var(--teal-soft)}
+.nav-cta{background:var(--teal)!important;color:#fff!important;padding:10px 18px!important;border-radius:40px!important}
+.nav-cta:hover{background:var(--teal-dim)!important}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--teal);cursor:pointer}
+.hero{padding:120px 22px 64px;background:linear-gradient(160deg,var(--teal-pale) 0%,var(--bg) 55%,#fff 100%)}
+.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--teal-soft);border:1px solid var(--border-strong);padding:7px 14px;border-radius:40px;margin-bottom:16px;font-size:.78rem;font-weight:700;color:var(--teal)}
+.hero h1{font-size:clamp(2.4rem,6vw,3.4rem);margin-bottom:14px}
+.hero h1 span{color:var(--teal)}
+.hero-sub{font-size:1.05rem;color:var(--ink-soft);max-width:480px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:50px;font-weight:700;font-size:.88rem;transition:.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 8px 24px rgba(13,148,136,.28)}
+.btn-primary:hover{background:var(--teal-dim);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--teal);border:1.5px solid var(--teal)}
+.btn-outline:hover{background:var(--teal);color:#fff}
+.hero-meta{display:flex;gap:20px;flex-wrap:wrap;padding-top:18px;border-top:1px solid var(--border);font-size:.84rem;color:var(--ink-soft)}
+.hero-meta strong{color:var(--ink);display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.hero-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:0 16px 40px rgba(15,36,32,.06)}
+.hero-card h3{font-size:1.2rem;margin-bottom:12px;color:var(--teal)}
+.hero-card ul{list-style:none;font-size:.9rem;color:var(--ink-soft)}
+.hero-card li{padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.hero-card li:last-child{border-bottom:none}
+section{padding:64px 22px}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:800;margin-bottom:8px}
+.section-title{font-size:clamp(1.9rem,4vw,2.5rem);margin-bottom:12px}
+.section-intro{color:var(--ink-soft);max-width:560px;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;transition:.25s}
+.card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:0 12px 28px rgba(13,148,136,.1)}
+.card .icon{font-size:1.6rem;margin-bottom:12px}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.card p{font-size:.88rem;color:var(--ink-soft)}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.loc-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}
+.loc-card.featured{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.loc-card h3{font-size:1.2rem;margin-bottom:6px}
+.loc-card .tag{display:inline-block;background:var(--teal);color:#fff;font-size:.68rem;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+.loc-card p{font-size:.9rem;color:var(--ink-soft);margin-bottom:8px}
+.hours-table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:12px}
+.hours-table td{padding:8px 0;border-bottom:1px solid var(--border);color:var(--ink-soft)}
+.hours-table td:last-child{text-align:right;font-weight:600;color:var(--ink)}
+.cta-band{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dim) 100%);color:#fff;text-align:center;padding:56px 22px}
+.cta-band h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:10px}
+.cta-band p{opacity:.92;margin-bottom:20px}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--teal)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+footer{background:#0a1f1c;color:rgba(255,255,255,.5);padding:40px 22px 24px;text-align:center}
+.footer-logo{font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:6px}
+.footer-tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:700}
+.footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.footer-links a{font-size:.84rem;color:rgba(255,255,255,.5)}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:.7rem;color:rgba(255,255,255,.3);padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
+.float-call{position:fixed;bottom:20px;right:20px;z-index:90;background:var(--teal);color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 6px 22px rgba(13,148,136,.4)}
+.page-hero{padding:110px 22px 40px;background:var(--teal-pale);border-bottom:1px solid var(--border)}
+.page-hero .container{max-width:1100px;margin:0 auto}
+.page-hero h1{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:8px}
+.page-hero p{color:var(--ink-soft);max-width:520px}
+.service-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.service-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.service-item strong{display:block;margin-bottom:4px}
+.service-item span{font-size:.86rem;color:var(--ink-soft)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.contact-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}
+.contact-box h3{font-size:1.1rem;margin-bottom:12px;color:var(--teal)}
+.contact-box p,.contact-box a{font-size:.94rem;color:var(--ink-soft)}
+.contact-box a:hover{color:var(--teal)}
+.map-box{border-radius:16px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3;background:var(--card)}
+.map-box iframe{width:100%;height:100%;border:0}
+.demo-banner{background:var(--gold);color:#1a1612;text-align:center;padding:8px 16px;font-size:.78rem;font-weight:700}
+@media(max-width:860px){
+  .hero-grid,.loc-grid,.cards,.service-list,.contact-grid{grid-template-columns:1fr}
+  .hero{padding:100px 18px 48px}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:16px;gap:8px;border-bottom:1px solid var(--border);align-items:flex-start}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  section{padding:48px 18px}
+}
+</style>
+</head>
+<body>
+  <div class="demo-banner">DEMO · Era Dental Surgery (main town location) + Lesedi Mmabatho branch</div>
+  <nav>
+    <div class="inner">
+      <a href="index.html" class="nav-logo"><span>E</span> Era Dental</a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a><a href="services.html" class="">Services</a><a href="locations.html" class="">Locations</a><a href="contact.html" class="">Contact</a>
+        <a href="tel:0183816340" class="nav-cta">📞 018 381 6340</a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">⭐ 3,700+ Google reviews · Mahikeng</div>
+        <h1>Modern dental care in the <span>heart of town</span></h1>
+        <p class="hero-sub">
+          Era Dental Surgery provides specialised treatment and oral hygiene in a friendly, professional setting. Walk-ins welcome where capacity allows.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:0183816340" class="btn btn-primary">📞 Call 018 381 6340</a>
+          <a href="locations.html" class="btn btn-outline">Our locations</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>Main clinic</strong>30 Nelson Mandela Dr</div>
+          <div><strong>Hours</strong>Mon–Fri 8–5 · Sat 8–1</div>
+          <div><strong>Payments</strong>Medical aid · Cash · EFT</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Why patients choose us</h3>
+        <ul>
+          <li>🦷 Full range of general &amp; specialised care</li>
+          <li>👨‍⚕️ Experienced clinical team</li>
+          <li>📍 Central town location (Libertas)</li>
+          <li>💳 Medical aid accepted</li>
+          <li>🕐 Open 6 days a week</li>
+          <li>⭐ Thousands of Google reviews</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">Care for every smile</h2>
+      <p class="section-intro">From routine check-ups to restorative treatment — we focus on gentle, reliable dental care.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">🔍</div>
+          <h3>Check-ups &amp; hygiene</h3>
+          <p>Consultations, scaling &amp; polishing, oral hygiene advice.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🦷</div>
+          <h3>Fillings &amp; extractions</h3>
+          <p>Restorative work and careful tooth removal when needed.</p>
+        </div>
+        <div class="card">
+          <div class="icon">👑</div>
+          <h3>Crowns, bridges &amp; dentures</h3>
+          <p>Restore function and confidence with quality prosthetics.</p>
+        </div>
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>Whitening &amp; cosmetics</h3>
+          <p>Brighter smiles with professional whitening options.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧒</div>
+          <h3>Children’s dentistry</h3>
+          <p>Gentle care for younger patients and school outreach support.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📋</div>
+          <h3>Root canal &amp; more</h3>
+          <p>Specialised treatments to save teeth and relieve pain.</p>
+        </div>
+      </div>
+      <p style="margin-top:20px"><a href="services.html" class="btn btn-outline">View all services →</a></p>
+    </div>
+  </section>
+
+  <section style="background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div class="section-label">Locations</div>
+      <h2 class="section-title">Two places to serve you</h2>
+      <p class="section-intro">Main clinic in town plus our Mmabatho branch (Lesedi Dental Surgery).</p>
+      <div class="loc-grid">
+        <div class="loc-card featured">
+          <span class="tag">MAIN · TOWN</span>
+          <h3>Era Dental Surgery</h3>
+          <p>📍 30 Nelson Mandela Drive, Libertas, Mahikeng, 2745</p>
+          <p>📞 <a href="tel:0183816340">018 381 6340</a></p>
+          <p>Mon–Fri 08:00–17:00 · Sat 08:00–13:00 · Sun closed</p>
+        </div>
+        <div class="loc-card">
+          <span class="tag" style="background:var(--ink-muted)">BRANCH</span>
+          <h3>Lesedi Dental Surgery</h3>
+          <p>📍 Unit 12, 4040 Peace Crescent, Mmabatho, 2790</p>
+          <p>📞 <a href="tel:0183840749">018 384 0749</a></p>
+          <p>Mon–Fri 08:00–17:00 · Sat 08:00–13:00 · Sun closed</p>
+        </div>
+      </div>
+      <p style="margin-top:20px"><a href="locations.html" class="btn btn-outline">Full location details →</a></p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready for a healthier smile?</h2>
+    <p>Call the main clinic or visit us during opening hours.</p>
+    <div class="cta-actions">
+      <a href="tel:0183816340" class="btn btn-white">📞 018 381 6340</a>
+      <a href="contact.html" class="btn btn-ghost">Contact &amp; map</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">Era Dental Surgery</div>
+    <div class="footer-tag">Mahikeng · Modern dental care</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="locations.html">Locations</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:0183816340">018 381 6340</a>
+    </div>
+    <div class="footer-copy">© 2026 Era Dental Surgery · Demo site</div>
+  </footer>
+  <a href="tel:0183816340" class="float-call" aria-label="Call">📞</a>
+</body>
+</html>
